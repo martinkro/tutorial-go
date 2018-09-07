@@ -1,0 +1,55 @@
+# 空标识符
+变量x 不存在任何对它的使用，则编译器会报错
+_ = x
+
+# 关键字type  类型声明
+type myString string  // myString 是string的别名类型
+interface{} 空接口  任何类型都是空接口的实现类型
+
+# 操作符
+
+&^ 按位清除  0b0000 0101  &^ 0b0000 1011 = 0b 0100
+<- 接收操作符
+
+# 数据类型
+只有基本数据类型及其别名类型才能作为常量类型
+
+const DEAULT_IP string = "127.0.0.1"
+
+高级数据类型
+数组
+var ipv4 [4]uint8 = [4]uint8{127,0,0,1}
+数组零值是空数组
+
+切片
+
+var ips = []string{"192.168.0.1","192.168.0.1"}
+切片的长度可变，且不是类型的一部分，零值是nil
+
+ips = make([]string,100)
+
+字典
+引用类型
+var ipSwitches = map[string]bool{} 零值是nil
+
+函数和方法
+函数和方法是一等类型
+
+func divide(dividend int, divisor int)(result int, err error){
+    if (divisor == 0){
+        err = errors.New("division by zero")
+        return
+    }
+    result = dividend / divisor
+    return
+}
+
+零值是nil
+type binaryOperation func(operand1 int,operand2 int)(result int,err error)
+
+方法是函数的一种 与某个数据类型相关
+type myInt int 
+func (i myInt) add(another int) myInt{
+    i = i + myInt(another)
+    return i
+}
