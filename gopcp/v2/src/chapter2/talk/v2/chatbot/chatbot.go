@@ -18,7 +18,7 @@ type Chatbot interface{
 var(
 	ErrInvalidChatbotName = errors.New("Invalid chatbot name")
 	ErrInvalidChatbot = errors.New("Invalid chatbot")
-	ErrExistStringChatbot = errors.New("Existing chatbot")
+	ErrExistingChatbot = errors.New("Existing chatbot")
 )
 
 var chatbotMap = map[string]Chatbot{}
