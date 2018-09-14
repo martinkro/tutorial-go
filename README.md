@@ -13,3 +13,5 @@ PATH=%GOROOT%\bin;PATH
 
 Source Code
 https://github.com/gopcp/example.v2
+
+Google Font opensans
